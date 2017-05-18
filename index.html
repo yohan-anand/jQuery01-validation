@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>forMate(Validator)</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <!-- Form to validate-->
+    <div class="container custom-container">
+      <h1 class="text-center">
+        Form validation using jquery
+      </h1>
+      <form novalidate="true">
+        <div class="form-group">
+          <label for="email" >Email address:</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="forMate.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+      $('form').change(function() {$(this).validateForm();}).submit(function(e)
+      {
+        $(this).validateForm();
+        e.preventDefault();
+      });
+    });
+    </script>
+  </body>
+</html>

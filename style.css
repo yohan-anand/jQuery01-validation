@@ -1,0 +1,11 @@
+.my-danger {
+  border: 1px solid red;
+}
+
+.my-success {
+  border: 1px solid green;
+}
+
+.my-warning {
+  border: 1px solid yellow;
+}
