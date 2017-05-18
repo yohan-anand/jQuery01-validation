@@ -5,14 +5,14 @@
         $(this).addClass('my-warning');
         $(this).removeClass('my-danger');
         $(this).parent().find('.error').remove();
-        $(this).parent().append('<p class="error">Empty field<p>');
+        $(this).parent().append('<p class="error">Error - Empty field<p>');
       } else {
         if($(this).attr('type')=='password'){
           if(!isValidPassword($(this).val())){
             $(this).removeClass('my-warning');
             $(this).addClass('my-danger');
             $(this).parent().find('.error').remove();
-            $(this).parent().append('<p class="error">Invalid Password<p>');
+            $(this).parent().append('<p class="error">Error - Invalid Password<p>');
           } else {
             $(this).removeClass('my-warning');
             $(this).removeClass('my-danger');
@@ -24,7 +24,7 @@
             $(this).removeClass('my-warning');
             $(this).addClass('my-danger');
             $(this).parent().find('.error').remove();
-            $(this).parent().append('<p class="error">Invalid '+ $(this).attr('type') +'<p>');
+            $(this).parent().append('<p class="error">Error - Invalid '+ $(this).attr('type') +'<p>');
           } else {
             $(this).removeClass('my-warning');
             $(this).removeClass('my-danger');
